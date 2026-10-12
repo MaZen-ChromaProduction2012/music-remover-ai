@@ -4,6 +4,16 @@ import os
 
 st.set_page_config(page_title="AI Music Remover", page_icon="🎵")
 
+# إخفاء عناصر وهوية Streamlit
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.title("🎵 أداة عزل الصوت والموسيقى")
 st.write("ارفع الملف الصوتي وسيقوم الذكاء الاصطناعي بفصل الصوت عن الموسيقى.")
 
